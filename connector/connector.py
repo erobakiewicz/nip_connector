@@ -13,16 +13,29 @@ class GUSConnector:
         transport = Transport(session=Session())
         transport.session.headers = {}
         self.client = Client(SANDBOX_URL, transport=transport)
+        self.session_key = None
 
     def run(self):
         self.login()
+        self.logout()
 
     def login(self):
         session_key = self.client.service.Zaloguj(
             pKluczUzytkownika=self.login_key
         )
         print(session_key)
-        return HttpResponse(session_key)
+        self.session_key = session_key
 
     def logout(self):
-        pass
+        self.client.service.Wyloguj(pIdentyfikatorSesji=self.session_key)
+
+
+
+
+
+
+
+
+
+
+
