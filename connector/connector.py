@@ -19,7 +19,6 @@ class GUSConnector:
         self.session_key = None
         self.data_dict = None
 
-
     def run(self):
         self.login()
         self.get_company_data()

@@ -5,7 +5,9 @@
 
 ## Instalation
 
-To install project locally type `pipenv install` in root dir. Set environment variables
+Using docker just run `docker-compose up`.
+
+To install project locally using pipenv type `pipenv install` in root dir. Set environment variables
 DEBUG, SECRET_KEY and DATABASE_URL.
 
 ## Endpoints
